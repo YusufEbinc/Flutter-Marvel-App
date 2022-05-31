@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_marvel_app/feature/home_detail/model/comic_model.dart';
+import 'package:flutter_marvel_app/product/constant/string_constant.dart';
 
 import '../../../product/constant/keys.dart';
 
@@ -10,8 +11,7 @@ abstract class IComicService {
 }
 
 class ComicService extends IComicService {
-  Dio dio = Dio(
-      BaseOptions(baseUrl: 'http://gateway.marvel.com/v1/public/characters'));
+  Dio dio = Dio(BaseOptions(baseUrl: StringConstants.baseUrl));
 
   @override
   Future<ComicsModel?> fetchComicItem(int? id) async {
