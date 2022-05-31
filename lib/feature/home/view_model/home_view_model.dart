@@ -51,7 +51,7 @@ class HomeViewModel extends ChangeNotifier {
         (await characterService.fetchCharacterItem(offset))?.data?.results ??
             [];
     results.addAll(leadList);
-    print(results.length);
+
     _changePaginingLoading();
   }
 }

@@ -21,7 +21,6 @@ class CharacterService extends ICharacterService {
       if (response.statusCode == HttpStatus.ok) {
         final body = response.data;
         if (body is Map<String, dynamic>) {
-          print(body);
           return CharacterModel.fromJson(body);
         }
       }
